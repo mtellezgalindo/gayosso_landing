@@ -302,3 +302,278 @@ textarea {
         page-break-after: avoid;
     }
 }
+/****SLIDER***/
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+
+
+/*******DISEÑOOOO******/
+header{
+    height: 150px;
+    width: 100%;
+}
+.logo_img{
+    margin: 8px 0 0 8px;
+    width: 150px;
+}
+.wrapper-content{
+    position: relative;
+}
+.wrapper-text{
+    overflow: hidden;
+    position: relative;
+}
+.marque{
+    background: #000;
+    height: 50px;
+    opacity: 0.6;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    z-index: 10;
+}
+.title_text{
+    color:#85764f;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+}
+.options{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+}
+.option{
+    float: left;
+    width: 32.99%;
+}
+
+.circle_red{
+    background-color:#df6357;
+    border-radius: 50%;
+    height: 175px;
+    margin: 0 auto;
+    width: 175px;
+}
+.circle_red.numero img {
+    margin-top: 35px;
+}
+
+.circle_red.numero > figure {
+    text-align: center;
+}
+.circle_yellow{
+    background-color: #e4b251;
+    border-radius: 50%;
+    height: 175px;
+    margin: 0 auto;
+    width: 175px;
+}
+.circle_yellow.numero img {
+    margin-top: 35px;
+}
+
+.circle_yellow.numero > figure {
+    text-align: center;
+}
+.circle_blue{
+    background-color:#69c3ce;
+    border-radius: 50%;
+    height: 175px;
+    margin: 0 auto;
+    width: 175px;
+}
+.circle_blue.numero img {
+    margin-top: 35px;
+}
+
+.circle_blue.numero > figure {
+    text-align: center;
+}
+
+    
+footer{
+    background-color: #88764e;
+    position: relative;
+    overflow: hidden;
+}
+.title_text_f{
+    color:#fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 15px;
+}
+.servicios{
+    width: 90%;
+    border-bottom:1px solid white;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top:40px;
+    padding-bottom: 40px;
+}
+.element_service{
+    position: relative;
+    overflow: hidden;
+}
+.title_service{
+    font-size: 17px;
+    color: #fff;
+    width:  85px;
+    float: left;
+}
+.ico-service{
+    width: 100px;
+    float: left;
+    margin-left: 30px
+}
+.description_service{
+    width: 32%;
+    float: left;
+    color: #fff;
+    font-size: 13px;
+    margin-left: 7px;
+}
+.solution{
+    width: 90%;
+    border-bottom:1px solid white;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: 40px;
+}
+.element_solution{
+    position: relative;
+    overflow: hidden;
+    margin-top: 40px;
+}
+.title_solution{
+    font-size: 17px;
+    color: #fff;
+    width:  130px;
+    float: left;
+}
+.ico-solution{
+    width: 100px;
+    float: left;
+    margin-left: 30px
+}
+.description_solution{
+    width: 32%;
+    float: left;
+    color: #fff;
+    font-size: 13px;
+    margin-left: 7px;
+}
+.integral{
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: 40px;
+}
+.element_integral{
+    position: relative;
+    overflow: hidden;
+    margin-top: 40px;
+}
+.title_integral{
+    font-size: 17px;
+    color: #fff;
+    width:  130px;
+    float: left;
+}
+.ico-integral{
+    width: 100px;
+    float: left;
+    margin-left: 30px
+}
+.description_integral{
+    width: 32%;
+    float: left;
+    color: #fff;
+    font-size: 13px;
+    margin-left: 7px;
+}
+/***MEIA QUERYS**/
+@media screen and (min-width: 361px)  and (max-width: 571px){
+  .option {        
+        width: 32.75% !important;
+    }
+    .description_service {
+        width: 30%;
+        margin-left: 0 !important;
+    } 
+     .description_solution {
+        width: 30%;
+        margin-left: 0 !important;
+    } 
+     .description_integral {
+        width: 30%;
+        margin-left: 0 !important;
+    }
+    .title_text_f {
+        font-size: 32px;
+    }
+}
+
+@media screen  and (max-width: 360px) {
+  .option {        
+        width: 100%;
+    }
+    .logo_img{
+        margin:0 auto;
+    }
+    .description_service {
+        font-size: 13px;
+        width: 100%;
+        margin-left: 0 !important;
+    } 
+    .description_solution {
+        font-size: 13px;
+        width: 100%;
+        margin-left: 0 !important;
+    } 
+    .description_integral {
+        font-size: 13px;
+        width: 100%;
+        margin-left: 0 !important;
+    }
+    .title_text_f {
+        font-size: 28px;
+    }
+
+}

@@ -107,6 +107,9 @@ $(document).ready(function(){
 	            }
 	        }
 	    }); 
-	}); 
+	});
+	$("#slider1").responsiveSlides({
+		speed: 800
+	});
 
 });
