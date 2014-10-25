@@ -1,8 +1,9 @@
 <?php
-/*$place = $_GET['lugar'];
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
+$place = $_GET['lugar'];
 if ($place == '') {
 $place = 'sitio';
-}*/
+}
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -21,6 +22,39 @@ $place = 'sitio';
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/mediasqueries.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script type="text/javascript">
+
+          function validarLetras(e) { // 1
+            tecla = (document.all) ? e.keyCode : e.which;
+            if (tecla==8) return true; // backspace
+        if (tecla==32) return true; // espacio
+        if (e.ctrlKey && tecla==86) { return true;} //Ctrl v
+        if (e.ctrlKey && tecla==67) { return true;} //Ctrl c
+        if (e.ctrlKey && tecla==88) { return true;} //Ctrl x
+         
+        patron = /[a-zA-Z]/; //patron
+         
+        te = String.fromCharCode(tecla);
+        return patron.test(te); // prueba de patron
+        }   
+            function validarNumeros(e) { // 1
+        tecla = (document.all) ? e.keyCode : e.which; // 2
+        if (tecla==8) return true; // backspace
+        if (tecla==109) return true; // menos
+            if (tecla==110) return true; // punto
+        if (tecla==189) return true; // guion
+        if (e.ctrlKey && tecla==86) { return true}; //Ctrl v
+        if (e.ctrlKey && tecla==67) { return true}; //Ctrl c
+        if (e.ctrlKey && tecla==88) { return true}; //Ctrl x
+        if (tecla>=96 && tecla<=105) { return true;} //numpad
+         
+        patron = /[0-9]/; // patron
+         
+        te = String.fromCharCode(tecla);
+        return patron.test(te); // prueba
+        }
+
+        </script>
     </head>
     <body>
         <header>
@@ -34,58 +68,62 @@ $place = 'sitio';
             <div class="slider">
                 <ul class="rslides" id="slider1">
                     <li>
-                        <img src="img/1.jpg" alt="">
+                        <img src="img/shutterstock_4562995.jpg" alt="">
                     </li>
                     <li>
-                        <img src="img/2.jpg" alt="">
+                        <img src="img/shutterstock_139576844.jpg" alt="">
                     </li>
                     <li>
-                        <img src="img/3.jpg" alt="">
+                        <img src="img/shutterstock_1827.jpg" alt="">
                     </li>
                 </ul>
             </div>
             <div class="marque">
-                <div class="ancl1 flotar">
-                    <a href="#como_funciona">¿CÓMO FUNCIONA?</a>
-                </div>
-                <div class="ancl2 flotar">
-                    <a href="#planes_de_prevision">PLANES DE PREVISIÓN</a>
+                <div class="wrapper-marque" >
+                    <div class="ancl1 flotar">
+                        <a href="#como_funciona">¿CÓMO FUNCIONA?</a>
+                    </div>
+                    <div class=" flotar">
+                        <a href="#planes_de_prevision">PLANES DE PREVISIÓN</a>
+                    </div>
                 </div>
             </div>
             <div class="formulario">
                 <div class="title_form">
-                    Dejanos tus datos y te asesoramos
+                    Déjanos tus datos y te asesoramos
                 </div>
                 <div class="form">
                     <form id="myForm" method="post">
                         <div class="content_label_nombre">
-                            <label for="name">Nombre</label>
+                            <label for="name">Nombre completo</label>
                         </div>
                         <div class="content_label">
-                            <input type="text" name="nombre" id="name" class="nombre">
+                            <input type="text" name="nombre" id="name" class="nombre" required onkeydown="return validarLetras(event)" maxlength="80">
                         </div>
                         <div class="content_label">
-                            <label for="phone">Télefono (Lada + Télefono)</label>
+                            <label for="phone">Teléfono (Lada + Teléfono)</label>
                         </div>
                         <div class="content_phone">
-                            <input type="tel" name="lada" id="lada" maxlength="4" class="lada">
-                            <input type="tel" name="phone" id="phone" class="telefono">
+                            <input type="tel" name="lada" id="lada" maxlength="4" class="lada"  onkeydown="return validarNumeros(event)" required>
+                            <input type="tel" name="phone" id="phone" class="telefono"  onkeydown="return validarNumeros(event)" required>
                         </div>
                         <div class="content_label">
                             <label for="email">E-mail</label>
                         </div>
                         <div>
-                            <input type="text" name="email" id="email" class="email">
+                            <input type="email" name="email" id="email" class="email" required>
                         </div>
                         <div class="content_label">
                             <label for="cp">Código Postal</label>
                         </div>
                         <div>
-                            <input type="text" name="cp" id="cp" class="cp">
+                            <input type="text" name="cp" id="cp" class="cp"  onkeydown="return validarNumeros(event)" required>
                         </div>
                         <input type="hidden" id="place" value="<?php echo $place;?>">
                         <div class="submit">
-                            <input id="submit" type="button"  value="Enviar">
+                                <input type="submit" value="Enviar" class="css3button" id="submit">
+                               <!-- <button type="button" name="" value="" id="submit" class="css3button">Enviar</button>-->
+                            
                         </div>
                     </form>
                 </div>
@@ -93,7 +131,7 @@ $place = 'sitio';
         </section>
         <section class="wrapper-text" id="como_funciona">
             <section class="title_text">
-                ¿Comó funciona?
+                ¿Cómo funciona?
             </section>
             <section class="options">
                 <div class="option">
@@ -174,7 +212,7 @@ $place = 'sitio';
                 <div class="description_service">
                     <ul>
                         <li>
-                            Capila ecuménica para servicios
+                            Capilla ecuménica para servicios
                             religiosos (según casa funeraria).
                         </li>
                     </ul>
@@ -259,6 +297,9 @@ $place = 'sitio';
                         </li>
                     </ul>
                 </div>
+            </section>
+            <section class=" aviso">   
+                <a href="">Aviso de Privacidad</a>
             </section>
         </footer>
         <!--[if lt IE 7]>

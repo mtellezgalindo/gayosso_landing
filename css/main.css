@@ -367,10 +367,19 @@ header{
     font-size: 13px;
 
 }
+.wrapper-marque{
+    text-align: center;
+}
+.wrapper-marque ul li{
+    float:  left;   
+
+}
 .flotar{
     float: left;
-    width:46%;
+    width:49%;
     margin-top: 10px;
+    border-right: 1px solid #fff;
+    margin-left:  2px;
 }
 
 .flotar a {
@@ -378,10 +387,9 @@ header{
     color: #fff;
 }
 .ancl1{
-    border-right: 1px solid #fff;
+
     border-left: 1px solid #fff;
-    padding: 5px;
-    text-align: center;
+  
 }
 .ancl2{
     border-right: 1px solid #fff;
@@ -394,6 +402,7 @@ header{
     font-size: 40px;
     font-weight: 400;
     text-align: center;
+    margin-top: 15px;
 }
 /******circulos*********/
 .options{
@@ -415,6 +424,7 @@ header{
     height: 175px;
     margin: 0 auto;
     width: 175px;
+    cursor:pointer;
 }
 .circle_red.numero img {
     margin-top: 35px;
@@ -429,6 +439,7 @@ header{
     height: 175px;
     margin: 0 auto;
     width: 175px;
+    cursor: pointer;
 }
 .circle_yellow.numero img {
     margin-top: 35px;
@@ -443,6 +454,7 @@ header{
     height: 175px;
     margin: 0 auto;
     width: 175px;
+    cursor: pointer;
 }
 .circle_blue.numero img {
     margin-top: 35px;
@@ -619,7 +631,7 @@ footer{
 .content_phone{
     position: relative;
     overflow: hidden;
-    width: 100%;
+    width: 110%;
 }
 input.lada{
     width: 30px;
@@ -628,8 +640,8 @@ input.lada{
 }
 input.telefono{
     float: left;
-    width: 138px;
-    margin-left: 10px;
+    width: 132px;
+    margin-left: 7px;
     margin-bottom: 12px;
 }
 input.nombre{
@@ -649,12 +661,55 @@ input.cp{
     margin-bottom: 12px;
     text-align: center;
 }
-.submit > input {
+
+.aviso{
+     width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+}
+.aviso a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px
+}
+/*.submit > input {
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
     border: medium none;
     color: #fff;
     font-size: 25px;
+}*/
+input[type=submit].css3button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #000000;
+    padding: 10px 20px;
+    background: -moz-linear-gradient(
+        top,
+        #ffdd56 0%,
+        #9e9639);
+    background: -webkit-gradient(
+        linear, left top, left bottom,
+        from(#ffdd56),
+        to(#9e9639));
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    border: 1px solid #ffdd56;
+    -moz-box-shadow:
+        0px 1px 3px rgba(000,000,000,0.5),
+        inset 0px 0px 2px rgba(255,255,255,0.7);
+    -webkit-box-shadow:
+        0px 1px 3px rgba(000,000,000,0.5),
+        inset 0px 0px 2px rgba(255,255,255,0.7);
+    box-shadow:
+        0px 1px 3px rgba(000,000,000,0.5),
+        inset 0px 0px 2px rgba(255,255,255,0.7);
+    text-shadow:
+        0px -1px 0px rgba(000,000,000,0.4),
+        0px 1px 0px rgba(255,255,255,0.3);
 }
+
 
 
 

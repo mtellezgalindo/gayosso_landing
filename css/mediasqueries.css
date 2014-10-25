@@ -48,12 +48,18 @@
     .circle_blue.numero img {
         margin-top: 20px;
     }
+    .flotar {
+  
+    margin-left: 3px !important;
+
+	}
 }
 
 @media screen and (max-width: 640px){
 	 .formulario{
         margin: 0 auto;
     	position: static;
+    	margin-top:25px;
     }
     .option{
     	width: 33%;
@@ -88,6 +94,18 @@
     .circle_blue.numero img {
         margin-top: 20px;
     }
+    .flotar {
+  
+    margin-left: 3px !important;
+
+	}
+}
+@media screen and (min-width: 1280px) and (max-width: 1500px){
+     .flotar {
+  
+    margin-left: 9px !important;
+
+	}
 }
 @media screen and (min-width: 1030px) and (max-width: 1200px){
     .formulario{
@@ -98,6 +116,11 @@
     .formulario{
         top: 80px;
     }
+    .flotar {
+  
+    margin-left: 5px !important;
+
+	}
 }
 @media screen and (min-width: 900px) and (max-width: 949px){
     .formulario{
@@ -139,6 +162,27 @@
     .title_text_f {
         font-size: 28px;
     }
+    .flotar {
+  
+    margin-left: 2px;
+
+	}
+
+}
+@media screen and (min-width: 641px) and (max-width: 878px){
+	 .formulario{
+        margin: 0 auto;
+    	position: static;
+    	width: 275px;
+    	margin-top:25px;
+    }
+     .flotar {
+  
+    margin-left: 3px !important;
+
+	}
+  
+}
 
 }
 @media screen and (max-width: 320px){
@@ -146,6 +190,7 @@
         margin: 0 auto;
     	position: static;
     	width: 275px;
+    	margin-top:25px;
     }
     input.telefono{
       
@@ -185,11 +230,17 @@
     .circle_blue.numero img {
         margin-top: 20px;
     }
+ 	 .flotar {
+  
+    margin-left: 2px !important;
+
+	}
 }
 @media screen and (max-width: 360px){
 	 .formulario{
         margin: 0 auto;
     	position: static;
+    	margin-top: 15px;
     }
     .option{
     	width: 33%;
@@ -224,12 +275,19 @@
     .circle_blue.numero img {
         margin-top: 20px;
     }
+     .flotar {
+  
+    margin-left: 1px !important;
+
+	}
+  
 }
 
 @media screen and (max-width: 480px){
 	 .formulario{
         margin: 0 auto;
     	position: static;
+    	margin-top:25px;
     }
     .option{
     	width: 33%;
@@ -264,6 +322,13 @@
     .circle_blue.numero img {
         margin-top: 20px;
     }
+     .flotar {
+  
+    margin-left: 1px ;
+
+	}
+
+
 }
 
 

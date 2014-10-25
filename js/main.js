@@ -9,7 +9,7 @@ $(document).ready(function(){
 		// Returns successful data submission message when the entered information is stored in database.
 		var dataString = 'name1='+ name + '&email1='+ email + '&lada1='+ lada + '&phone1='+ phone + '&zip1=' + zip + '&place1=' + place;
 		if(name==''||email==''||lada==''||phone==''||zip == '' || place == '') {
-			alert("Please Fill All Fields");
+			alert("Ingresa Todos los Datos");
 		}else{
 			// AJAX Code To Submit Form.
 			$.ajax({
@@ -19,7 +19,8 @@ $(document).ready(function(){
 				cache: false,
 				success: function(result){
 					alert(result);
-				}
+					document.location.reload(true);
+				}	
 			});
 		}
 	return false;
