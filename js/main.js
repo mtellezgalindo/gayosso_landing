@@ -19,7 +19,14 @@ $(document).ready(function(){
 				cache: false,
 				success: function(result){
 					alert(result);
-					document.location.reload(true);
+					if (result = 'Ingresa un Teléfono Real') {
+						window.location.href ="index.php";	
+					}elseif(result = 'El usuario ya fue registrado!!!'){
+						window.location.href ="index.php";	
+					}else{
+						window.location.href ="gracias.php";
+						
+					};
 				}	
 			});
 		}
@@ -161,4 +168,34 @@ $(document).ready(function(){
 		        window.location.hash = target;
 		    });
 		});
+
+	var colorOrig1 = $(".circle_red").css('background');
+    $(".circle_red").hover(
+    function() {
+        //mouse over
+        $(this).css('background', '#d9a39d')
+    }, function() {
+        //mouse out
+        $(this).css('background', colorOrig1)
+    });
+
+    var colorOrig2 = $(".circle_yellow").css('background');
+    $(".circle_yellow").hover(
+    function() {
+        //mouse over
+        $(this).css('background', '#E3D195')
+    }, function() {
+        //mouse out
+        $(this).css('background', colorOrig2)
+    });
+    var colorOrig3 = $(".circle_blue").css('background');
+    $(".circle_blue").hover(
+    function() {
+        //mouse over
+        $(this).css('background', '#B4D7D8')
+    }, function() {
+        //mouse out
+        $(this).css('background', colorOrig3)
+    });
+
 });
